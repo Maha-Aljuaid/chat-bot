@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <title>Control for moving the base</title>
+  </head>
+  <body>
+    <form action="insert.php" method="POST">
+    <div id="outer">
+          <div class="vertical"><input type="submit" value="forward"></div>
+          <div class="inner"><input type="submit" value="left"></div>
+          <div class="inner"><input type="submit" value="stop"></div>
+          <div class="inner"><input type="submit" value="right"></div>
+          <div class="vertical1"><input type="submit" value="backward"></div>
+      </div>
+    </form>
+    <script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "ed1aefe4-7aec-4c85-ae45-2628db000b8e", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "0bd48c7e-21df-45e9-98ce-09492ebec2c1", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+  </body>
+</html>
